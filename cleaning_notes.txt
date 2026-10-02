@@ -12,6 +12,7 @@ Customer gender got 6 values need to change in to 2 (male , female)
 can drop >>>> Promotion_Code (no insights needed)
 can drop >>>> Return_Reason  ( to much nan values 90% )
 Fill Customer Name missing Value with 'Agent'
-Fill Age missing Value with 'Mean age'
-fill customer Gender missing values 'Mode'
-fill Product_Name missing value with 
+Fill Age ,Delivery_Days missing Value with 'Mean '
+fill (customer Gender , Payment_Method) missing values 'Mode'
+fill Product_Name missing value with suitable data
+
