@@ -1,0 +1,5 @@
+Customer_Age no need to be float prefered to be integer
+Order_Date type is object ----> change to datetime
+Order_Time type is object ----> change to datetime
+Inventory_Level change from float -----> integer
+Drop columns ['Transaction_ID' , 'Order_ID' , 'Customer_ID ' , 'Store_ID ','Product_ID']
