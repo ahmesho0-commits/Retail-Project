@@ -2,17 +2,16 @@ Customer_Age no need to be float prefered to be integer
 Order_Date type is object ----> change to datetime
 Order_Time type is object ----> change to datetime
 Inventory_Level change from float -----> integer
-Drop columns ['Transaction_ID' , 'Order_ID' , 'Customer_ID ' , 'Store_ID ','Product_ID']
+Drop columns ['Transaction_ID' , 'Order_ID' , 'Customer_ID ' , 'Store_ID ','Product_ID'] ---- >Done
 Drop Duplicates + reset index ----> Done
 Age got not reliable numbesr as 4 , 112 
 Quantity got numbesr <0 
 Discount_Percentage got % more than 100 which is not logic
 Profit got a -ve number 
 Customer gender got 6 values need to change in to 2 (male , female)
-can drop >>>> Promotion_Code (no insights needed)
-can drop >>>> Return_Reason  ( to much nan values 90% )
-Fill Customer Name missing Value with 'Agent'
-Fill Age ,Delivery_Days missing Value with 'Mean '
-fill (customer Gender , Payment_Method) missing values 'Mode'
-fill Product_Name missing value with suitable data
+can drop >>>> Promotion_Code (no insights needed)----> Done
+can drop >>>> Return_Reason  ( to much nan values 90% )----> Done
+Drop Na for Customer_Name ,Customer_Age ,Customer_Gender ,Product_Name ,Payment_Method , Delivery_Days ,Inventory_Level < 1% ----> Done
+fill Customer_Rating with Mean of customer Customer_Rating -------- > Done
+
 
