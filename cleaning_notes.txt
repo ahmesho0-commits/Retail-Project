@@ -12,6 +12,6 @@ Customer gender got 6 values need to change in to 2 (male , female)
 can drop >>>> Promotion_Code (no insights needed)----> Done
 can drop >>>> Return_Reason  ( to much nan values 90% )----> Done
 Drop Na for Customer_Name ,Customer_Age ,Customer_Gender ,Product_Name ,Payment_Method , Delivery_Days ,Inventory_Level < 1% ----> Done
-fill Customer_Rating with Mean of customer Customer_Rating -------- > Done
+fill Customer_Rating with KNN for numerical columns  -------- > Done
 
 
