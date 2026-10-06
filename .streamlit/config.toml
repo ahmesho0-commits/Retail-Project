@@ -1,0 +1,3 @@
+# Make Light interface the default theme
+[theme] 
+    base = "light"
