@@ -1,0 +1,49 @@
+/* Hide default footer and menu */
+header {visibility: hidden;}
+footer {visibility: hidden;}
+
+/* Page header band */
+.page-header {
+    text-align: center;
+    padding: 24px 10px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    background: linear-gradient(90deg, #0F766E, #14B8A6);
+    color: white;
+}
+.page-header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+}
+.page-header p {
+    margin: 8px 0 0 0;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+/* KPI cards */
+[data-testid="stMetric"] {
+    background-color: white;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+/* Insight callouts */
+.insight {
+    border-left: 5px solid #0F766E;
+    background: #F1F5F9;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 12px 0 20px 0;
+    color: #0F172A;
+}
+
+/* Consistent spacing for block container */
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}

@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
  
-st.set_page_config(page_title='KPIS', layout='wide')
+ 
 html = """
     <div style="text-align: center; font-size: 30px; font-weight: bold;">
         Retail Data Analysis
