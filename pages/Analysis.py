@@ -35,7 +35,9 @@ with tab2 :
      chart_select_1 = st.radio('Chart' , ['Histogram','Pie'])
      if  st.button('Show Chart',key=2):
         if chart_select_1 == 'Histogram':
-            st.plotly_chart(px.histogram (data_frame=df , x= user_select_1,title = user_select_1))
+            st.plotly_chart(px.histogram (data_frame=df , x= user_select_1,title = user_select_1   
+                                        ,text_auto=True).update_xaxes(categoryorder= 'max descending'))
         else: 
             st.plotly_chart(px.pie(data_frame=df , names= user_select_1,title=user_select_1))
-    
+
+
