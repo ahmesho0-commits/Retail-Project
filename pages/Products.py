@@ -58,12 +58,14 @@ st.subheader(":material/pie_chart: Pareto Analysis (Cumulative Sales)")
 p_sort = p.sort_values("Sales", ascending=False).reset_index(drop=True)
 p_sort["Cumulative_Sales"] = p_sort["Sales"].cumsum()
 p_sort["Cumulative_Pct"] = p_sort["Cumulative_Sales"] / p_sort["Sales"].sum() * 100
+top = p_sort.head(50)
 
 fig_pareto = go.Figure()
-fig_pareto.add_trace(go.Bar(x=p_sort.index[:50], y=p_sort["Sales"][:50], name="Sales", marker_color="#0F766E"))
-fig_pareto.add_trace(go.Scatter(x=p_sort.index[:50], y=p_sort["Cumulative_Pct"][:50], name="Cumulative %", yaxis="y2", line=dict(color="#B45309", width=2)))
+fig_pareto.add_trace(go.Bar(x=top["Product_Name"], y=top["Sales"], name="Sales", marker_color="#0F766E"))
+fig_pareto.add_trace(go.Scatter(x=top["Product_Name"], y=top["Cumulative_Pct"], name="Cumulative %", yaxis="y2", line=dict(color="#B45309", width=2)))
 fig_pareto.update_layout(
-    title="Pareto Chart of Top 50 Products",
+    title=f"Pareto Chart of Top {len(top)} Products",
+    xaxis=dict(type="category", tickangle=-45),
     yaxis=dict(title="Sales Amount"),
     yaxis2=dict(title="Cumulative %", overlaying="y", side="right", range=[0, 105]),
     showlegend=False
@@ -74,3 +76,5 @@ st.subheader(":material/reviews: Average Rating by Category")
 rating_cat = df.groupby("Product_Category", as_index=False).agg(Avg_Rating=("Customer_Rating", "mean")).sort_values("Avg_Rating")
 fig_rating = px.bar(rating_cat, x="Avg_Rating", y="Product_Category", orientation="h", text_auto=".2f", title="Average Rating by Category")
 st.plotly_chart(style(fig_rating), width="stretch")
+
+
